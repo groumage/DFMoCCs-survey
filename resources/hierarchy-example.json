@@ -1,0 +1,10 @@
+{
+    "category_1": {
+        "features": ["Domain rate", "Rate and topology dynamism", "Delay", "Execution time", "Frequency", "Domain rate", "Phases", "Initial tokens", "Determinism", "Consistency", "Liveness", "Execution windows"],
+        "coefficient": 1
+    },
+    "category_2": {
+        "features": ["Blocking factor", "Consumption threshold", "Decidability", "Global state", "Hierarchy", "Init. and disc. of it", "Initial and steady phases", "Latency", "Meta model", "Multi-dimensional FIFO", "Out-of-order consumption", "Parameters", "Prod. and cons. instants", "Quasi-static schedule", "Rate as interval", "Sliding window", "Statically schedulable", "Strong consistency", "Throughput"],
+        "coefficient": 0
+    }
+}

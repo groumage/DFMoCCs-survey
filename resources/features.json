@@ -1,0 +1,20 @@
+{
+    "bf": "Blocking factor",
+    "ct": "Consumption threshold",
+    "del": "Delay",
+    "et": "Execution time",
+    "freq": "Frequency",
+    "gs": "Global state",
+    "hi": "Hierarchy",
+    "inidist": "Init. and disc. of it",
+    "inistep": "Initial and steady phases",
+    "it": "Initial tokens",
+    "mm": "Meta model",
+    "mdf": "Multi-dimensional FIFO",
+    "ooc": "Out-of-order consumption",
+    "pa": "Parameters",
+    "ph": "Phases",
+    "pci": "Prod. and cons. instants",
+    "rai": "Rate as interval",
+    "swi": "Sliding windows"
+}
