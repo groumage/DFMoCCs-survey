@@ -89,6 +89,11 @@
 #
 # @note While a new dataflow model added in the `resources/classification.json` file is immediately available in the GUI, the new features and static analyses added in the `resources/features.json` and `resources/analyzability.json` files are not. To make them available in the GUI, checkboxes must be added in the GUI. Unfortunately, I didn't find a way to do it automatically. So, you have to add them manually in the QT Designer. To do so, open the `main_window.ui` file in the QT Designer and add as much as checkboxes as you want. The text of the checkbox **must be the same** as the name of the feature or static analysis in the `resources/features.json` and `resources/analyzability.json` files, e.g., the text of the checkbox related to the feature `"bf": "Blocking factor"` in the `resources/features.json` file is `Blocking factor` (case sensitive).
 #
+# The following command line generates the main_window_ui.py file from the main_window.ui file:
+# ```bash
+# pyuic5 -o source/main_window_ui.py resources/main_window.ui
+# ```
+#
 # @section references References
 #
 # [1] G. Roumage, S. Azaiez and S. Louise, "A survey of main dataflow MoCCs for CPS design and verification", 2022 IEEE 15th International Symposium on Embedded Multicore/Many-core Systems-on-Chip (MCSoC), Penang, Malaysia, 2022, pp. 1-9, doi: 10.1109/MCSoC57363.2022.00010.
