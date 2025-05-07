@@ -1,7 +1,7 @@
 """!
 @file classificationGUI.py
 @author guillaume.roumage.research@proton.me
-@date 21604/2025
+@date 21/04/2025
 
 @brief This file contains the GUI for the dataflow models classification.
 """
