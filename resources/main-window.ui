@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1250</width>
+    <height>910</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Classification DF MoCCs</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="table">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>90</y>
+      <width>330</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QListWidget" name="category_1_list">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>380</y>
+      <width>210</width>
+      <height>460</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="category_1_label">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>350</y>
+      <width>70</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Category 1</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="coefficient_category_1_spin_box">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>350</y>
+      <width>45</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="category_2_label">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>350</y>
+      <width>70</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Category 2</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="category_2_list">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>380</y>
+      <width>210</width>
+      <height>460</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="coefficient_category_2_spin_box">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>350</y>
+      <width>45</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="right_button">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>350</y>
+      <width>70</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Right</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="left_button">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>350</y>
+      <width>70</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Left</string>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="graph" native="true">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>20</y>
+      <width>440</width>
+      <height>320</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="filtering_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>400</width>
+      <height>670</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="filtering_label">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>0</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Filter box</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QFrame" name="analyzability_frame">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>40</y>
+       <width>170</width>
+       <height>410</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <widget class="QLabel" name="anayzability_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>114</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Static analyzability</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="consistency_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Consistency</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="determinism_check_box_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Decidability</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="determinism_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Determinism</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="execution_windows_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execution windows</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="latency_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Latency</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="liveness_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Liveness</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="memory_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Memory</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="quasi_static_schedule_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quasi-static schedule</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="statically_schedulable_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>320</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Statically schedulable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="strong_consistency_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Strong consistency</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="throughput_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Throughput</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="group_radio_button_analyzability">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QRadioButton" name="all_radio_button_analyzability">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>50</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>All</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="any_radio_button_analyzability">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Any</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="features_frame">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>200</width>
+       <height>620</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="sliding_window_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>590</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sliding window</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="rate_as_interval_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>560</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rate as interval</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="production_and_consumption_instants_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>530</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prod. and cons. instants</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="phases_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>500</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Phases</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="parameters_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>470</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Parameters</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="out_of_order_consumption_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Out-of-order consumption</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="multi_dimensional_fifo_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Multi-dimensional FIFO</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="meta_model_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Meta model</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="initial_tokens_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Initial tokens</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="initial_and_steady_phases_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>320</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Initial and steady phases</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="initial_and_discard_of_initial_tokens_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Initi. and disc. of it</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="hierarchy_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Hierarchy</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="global_state_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Global state</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="frequency_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Frequency</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="execution_time_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Execution time</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="phase_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delay</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="consumption_threshold_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Consumption threshold</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="blocking_factor_check_box">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Blocking factor</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="group_radio_button_features">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>120</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QRadioButton" name="all_radio_button_features">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>50</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>All</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="any_radio_button_features">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>50</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Any</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="features_label">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>10</y>
+        <width>57</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Features</string>
+      </property>
+     </widget>
+    </widget>
+    <zorder>features_frame</zorder>
+    <zorder>analyzability_frame</zorder>
+    <zorder>filtering_label</zorder>
+   </widget>
+   <widget class="QCheckBox" name="show_non_turing_complete_check_box">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>20</y>
+      <width>184</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show non Turing complete</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="show_turing_complete_check_box">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>50</y>
+      <width>158</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Turing complete</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="show_meta_models_check_box">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>50</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show meta-models</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rates_updates_description_label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>710</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Rates updates</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rate_updates_content_label">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>710</y>
+      <width>70</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="topology_updates_description_label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>730</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Topology updates</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="topology_updates_content_label">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>730</y>
+      <width>70</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="domain_rate_content_label">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>750</y>
+      <width>70</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="domain_rate_description_label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>750</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Domain rate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="features_description_label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>770</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Features</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="features_content_label">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>770</y>
+      <width>190</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="analyzability_description_label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>790</y>
+      <width>140</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>Static analyzability</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="analyzability_content_label">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>790</y>
+      <width>190</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string>N/A</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="importHierarchyButton">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>830</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Import hierarchy</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportHierarchyButton">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>830</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Export hierarchy</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1250</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>table</tabstop>
+  <tabstop>category_1_list</tabstop>
+  <tabstop>coefficient_category_1_spin_box</tabstop>
+  <tabstop>category_2_list</tabstop>
+  <tabstop>coefficient_category_2_spin_box</tabstop>
+  <tabstop>right_button</tabstop>
+  <tabstop>left_button</tabstop>
+  <tabstop>consistency_check_box</tabstop>
+  <tabstop>determinism_check_box_2</tabstop>
+  <tabstop>determinism_check_box</tabstop>
+  <tabstop>execution_windows_check_box</tabstop>
+  <tabstop>latency_check_box</tabstop>
+  <tabstop>liveness_check_box</tabstop>
+  <tabstop>memory_check_box</tabstop>
+  <tabstop>quasi_static_schedule_check_box</tabstop>
+  <tabstop>statically_schedulable_check_box</tabstop>
+  <tabstop>strong_consistency_check_box</tabstop>
+  <tabstop>throughput_check_box</tabstop>
+  <tabstop>all_radio_button_analyzability</tabstop>
+  <tabstop>any_radio_button_analyzability</tabstop>
+  <tabstop>sliding_window_check_box</tabstop>
+  <tabstop>rate_as_interval_check_box</tabstop>
+  <tabstop>production_and_consumption_instants_check_box</tabstop>
+  <tabstop>phases_check_box</tabstop>
+  <tabstop>parameters_check_box</tabstop>
+  <tabstop>out_of_order_consumption_check_box</tabstop>
+  <tabstop>multi_dimensional_fifo_check_box</tabstop>
+  <tabstop>meta_model_check_box</tabstop>
+  <tabstop>initial_tokens_check_box</tabstop>
+  <tabstop>initial_and_steady_phases_check_box</tabstop>
+  <tabstop>initial_and_discard_of_initial_tokens_check_box</tabstop>
+  <tabstop>hierarchy_check_box</tabstop>
+  <tabstop>global_state_check_box</tabstop>
+  <tabstop>frequency_check_box</tabstop>
+  <tabstop>execution_time_check_box</tabstop>
+  <tabstop>phase_check_box</tabstop>
+  <tabstop>consumption_threshold_check_box</tabstop>
+  <tabstop>blocking_factor_check_box</tabstop>
+  <tabstop>all_radio_button_features</tabstop>
+  <tabstop>any_radio_button_features</tabstop>
+  <tabstop>show_non_turing_complete_check_box</tabstop>
+  <tabstop>show_turing_complete_check_box</tabstop>
+  <tabstop>show_meta_models_check_box</tabstop>
+  <tabstop>importHierarchyButton</tabstop>
+  <tabstop>exportHierarchyButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

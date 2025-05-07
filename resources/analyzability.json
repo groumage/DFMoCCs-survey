@@ -1,0 +1,13 @@
+{
+    "co": "Consistency",
+    "dec": "Decidability",
+    "det": "Determinism",
+    "execwin": "Execution windows",
+    "la": "Latency",
+    "li": "Liveness",
+    "me": "Memory",
+    "qsch": "Quasi-static schedule",
+    "stasch": "Statically schedulable",
+    "sco": "Strong consistency",
+    "th": "Throughput"
+}
